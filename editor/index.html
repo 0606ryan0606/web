@@ -1,8 +1,182 @@
-<!DOCTYPE html>
-<html>
-<body style="font-family:Arial;padding:40px">
-<h1>Editor Placeholder</h1>
-<p>Put your editor page here later.</p>
-<a href="/">Back Home</a>
-</body>
-</html>
+<!DOCTYPE html><html lang="zh-Hant"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Editor</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+margin:0;
+font-family:Inter,Arial,sans-serif;
+background:#fff;
+color:#111;
+line-height:1.8;
+}
+.nav{
+position:fixed;
+top:20px;
+left:50%;
+transform:translateX(-50%);
+width:min(1180px,calc(100vw - 30px));
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 22px;
+background:rgba(255,255,255,.84);
+backdrop-filter:blur(14px);
+border:1px solid rgba(0,0,0,.08);
+border-radius:999px;
+z-index:100;
+}
+.logo{
+font-weight:900;
+font-size:20px;
+letter-spacing:-.04em;
+}
+.links{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+.links a{
+text-decoration:none;
+color:#111;
+font-weight:700;
+padding:10px 16px;
+border-radius:999px;
+transition:.2s ease;
+}
+.links a:hover{
+background:#111;
+color:#fff;
+}
+.hero{
+min-height:70vh;
+display:grid;
+place-items:center;
+padding:140px 20px 80px;
+text-align:center;
+}
+.hero h1{
+margin:0;
+font-size:clamp(64px,12vw,180px);
+line-height:.9;
+letter-spacing:-.08em;
+}
+.hero p{
+max-width:760px;
+margin:24px auto 0;
+font-size:20px;
+color:#666;
+}
+.container{
+width:min(1180px,100%);
+margin:auto;
+padding:0 20px;
+}
+.section{
+padding:90px 0;
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:22px;
+}
+.card{
+background:#f5f5f5;
+padding:30px;
+border-radius:30px;
+box-shadow:0 20px 50px rgba(0,0,0,.06);
+}
+.card h3{
+margin-top:0;
+font-size:30px;
+letter-spacing:-.04em;
+}
+.card p{
+color:#666;
+}
+.footer{
+padding:50px 20px 80px;
+color:#777;
+}
+.footer-inner{
+width:min(1180px,100%);
+margin:auto;
+padding-top:24px;
+border-top:1px solid rgba(0,0,0,.08);
+display:flex;
+justify-content:space-between;
+gap:20px;
+flex-wrap:wrap;
+}
+.gallery{
+display:grid;
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:20px;
+}
+.image{
+aspect-ratio:1/1;
+border-radius:30px;
+background:linear-gradient(135deg,#111,#666);
+}
+.button{
+display:inline-block;
+margin-top:30px;
+padding:14px 22px;
+border-radius:999px;
+background:#111;
+color:#fff;
+text-decoration:none;
+font-weight:700;
+}
+input,textarea{
+width:100%;
+padding:14px;
+margin-top:10px;
+border-radius:18px;
+border:1px solid rgba(0,0,0,.12);
+font:inherit;
+}
+textarea{min-height:160px}
+@media(max-width:900px){
+.grid,.gallery{
+grid-template-columns:1fr;
+}
+.nav{
+padding:12px 16px;
+}
+}
+</style>
+</head><body>
+
+<nav class="nav">
+  <div class="logo">LOVE</div>
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/gallery">Gallery</a>
+    <a href="/projects">Projects</a>
+    <a href="/editor">Editor</a>
+    <a href="/contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+<div>
+<h1>Editor</h1>
+<p>Editable control panel concept for future CMS development.</p>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="card">
+<h3>Website Editor</h3>
+<input placeholder="Website title">
+<input placeholder="Subtitle">
+<textarea placeholder="Website description"></textarea>
+<a class="button" href="/">Save</a>
+</div>
+</div>
+</section>
+<footer class="footer"><div class="footer-inner"><div>Editor</div><div>CMS Prototype</div></div></footer>
+</body></html>
