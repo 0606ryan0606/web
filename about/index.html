@@ -1,153 +1,183 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — LOVE NIGGA</title>
+<!DOCTYPE html><html lang="zh-Hant"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>About</title>
 <style>
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
 margin:0;
+font-family:Inter,Arial,sans-serif;
 background:#fff;
 color:#111;
-font-family:Arial,Helvetica,sans-serif;
-padding:40px 20px 80px;
+line-height:1.8;
 }
-.container{
-width:min(980px,100%);
-margin:0 auto;
-}
-.top{
+.nav{
+position:fixed;
+top:20px;
+left:50%;
+transform:translateX(-50%);
+width:min(1180px,calc(100vw - 30px));
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:80px;
-gap:20px;
-flex-wrap:wrap;
+padding:16px 22px;
+background:rgba(255,255,255,.84);
+backdrop-filter:blur(14px);
+border:1px solid rgba(0,0,0,.08);
+border-radius:999px;
+z-index:100;
 }
 .logo{
-font-size:14px;
-letter-spacing:.25em;
-text-transform:uppercase;
-color:#666;
-font-weight:700;
+font-weight:900;
+font-size:20px;
+letter-spacing:-.04em;
 }
-.nav{
+.links{
 display:flex;
 gap:12px;
 flex-wrap:wrap;
 }
-.nav a{
+.links a{
 text-decoration:none;
 color:#111;
-border:1px solid rgba(0,0,0,.12);
-padding:12px 18px;
-border-radius:999px;
 font-weight:700;
+padding:10px 16px;
+border-radius:999px;
+transition:.2s ease;
 }
-h1{
-font-size:clamp(48px,8vw,120px);
-line-height:.92;
-letter-spacing:-.06em;
+.links a:hover{
+background:#111;
+color:#fff;
+}
+.hero{
+min-height:70vh;
+display:grid;
+place-items:center;
+padding:140px 20px 80px;
+text-align:center;
+}
+.hero h1{
 margin:0;
-max-width:10ch;
+font-size:clamp(64px,12vw,180px);
+line-height:.9;
+letter-spacing:-.08em;
 }
-.intro{
-margin-top:28px;
-color:#666;
-line-height:1.9;
-font-size:18px;
+.hero p{
 max-width:760px;
+margin:24px auto 0;
+font-size:20px;
+color:#666;
+}
+.container{
+width:min(1180px,100%);
+margin:auto;
+padding:0 20px;
+}
+.section{
+padding:90px 0;
 }
 .grid{
 display:grid;
 grid-template-columns:repeat(3,minmax(0,1fr));
-gap:20px;
-margin-top:80px;
+gap:22px;
 }
 .card{
-padding:28px;
-border-radius:28px;
 background:#f5f5f5;
+padding:30px;
+border-radius:30px;
+box-shadow:0 20px 50px rgba(0,0,0,.06);
 }
-.card h2{
-margin:0 0 14px;
-font-size:28px;
+.card h3{
+margin-top:0;
+font-size:30px;
 letter-spacing:-.04em;
 }
 .card p{
-margin:0;
 color:#666;
-line-height:1.8;
 }
 .footer{
-margin-top:80px;
+padding:50px 20px 80px;
+color:#777;
+}
+.footer-inner{
+width:min(1180px,100%);
+margin:auto;
 padding-top:24px;
 border-top:1px solid rgba(0,0,0,.08);
-color:#666;
 display:flex;
 justify-content:space-between;
 gap:20px;
 flex-wrap:wrap;
 }
-@media (max-width:900px){
-.grid{grid-template-columns:1fr}
+.gallery{
+display:grid;
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:20px;
+}
+.image{
+aspect-ratio:1/1;
+border-radius:30px;
+background:linear-gradient(135deg,#111,#666);
+}
+.button{
+display:inline-block;
+margin-top:30px;
+padding:14px 22px;
+border-radius:999px;
+background:#111;
+color:#fff;
+text-decoration:none;
+font-weight:700;
+}
+input,textarea{
+width:100%;
+padding:14px;
+margin-top:10px;
+border-radius:18px;
+border:1px solid rgba(0,0,0,.12);
+font:inherit;
+}
+textarea{min-height:160px}
+@media(max-width:900px){
+.grid,.gallery{
+grid-template-columns:1fr;
+}
+.nav{
+padding:12px 16px;
+}
 }
 </style>
-</head>
-<body>
+</head><body>
+
+<nav class="nav">
+  <div class="logo">LOVE</div>
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/gallery">Gallery</a>
+    <a href="/projects">Projects</a>
+    <a href="/editor">Editor</a>
+    <a href="/contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+<div>
+<h1>About</h1>
+<p>
+這是一個使用純 HTML 與多頁架構建立的網站。<br>
+你可以持續擴充新的 section、作品與功能。
+</p>
+</div>
+</section>
+<section class="section">
 <div class="container">
-
-<div class="top">
-<div class="logo">LOVE / ABOUT</div>
-
-<div class="nav">
-<a href="/">Home</a>
-<a href="/editor">Editor</a>
-</div>
-</div>
-
-<h1>About this website.</h1>
-
-<div class="intro">
-這是一個極簡、快速、免費部署的靜態網站架構。<br><br>
-你現在的網站是由純 HTML 建立，因此非常容易擴充。
-之後你只需要新增資料夾與 index.html，就能建立更多頁面與網址路徑。
-</div>
-
 <div class="grid">
-
-<div class="card">
-<h2>Fast</h2>
-<p>
-沒有複雜後端，
-幾乎瞬間載入。
-</p>
+<div class="card"><h3>Structure</h3><p>使用資料夾路由結構，例如 /about 與 /gallery。</p></div>
+<div class="card"><h3>Deploy</h3><p>透過 GitHub 與 Vercel 自動更新網站。</p></div>
+<div class="card"><h3>Responsive</h3><p>所有頁面皆支援手機與桌面版。</p></div>
 </div>
-
-<div class="card">
-<h2>Simple</h2>
-<p>
-所有內容都能直接修改，
-很適合剛開始做網站。
-</p>
 </div>
-
-<div class="card">
-<h2>Expandable</h2>
-<p>
-之後可以再加 gallery、
-projects、contact 等頁面。
-</p>
-</div>
-
-</div>
-
-<div class="footer">
-<div>LOVE Website</div>
-<div>Static HTML Structure</div>
-</div>
-
-</div>
-</body>
-</html>
+</section>
+<footer class="footer"><div class="footer-inner"><div>About Page</div><div>LOVE Website</div></div></footer>
+</body></html>
