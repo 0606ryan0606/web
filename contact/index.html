@@ -1,9 +1,20 @@
-<!DOCTYPE html><html lang="zh-Hant"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Contact</title>
+
 <style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+
+*{
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
 body{
 margin:0;
 font-family:Inter,Arial,sans-serif;
@@ -11,6 +22,9 @@ background:#fff;
 color:#111;
 line-height:1.8;
 }
+
+/* NAV */
+
 .nav{
 position:fixed;
 top:20px;
@@ -27,16 +41,19 @@ border:1px solid rgba(0,0,0,.08);
 border-radius:999px;
 z-index:100;
 }
+
 .logo{
 font-weight:900;
 font-size:20px;
 letter-spacing:-.04em;
 }
+
 .links{
 display:flex;
 gap:12px;
 flex-wrap:wrap;
 }
+
 .links a{
 text-decoration:none;
 color:#111;
@@ -45,60 +62,115 @@ padding:10px 16px;
 border-radius:999px;
 transition:.2s ease;
 }
+
 .links a:hover{
 background:#111;
 color:#fff;
 }
+
+/* HERO */
+
 .hero{
-min-height:70vh;
+min-height:50vh;
 display:grid;
 place-items:center;
-padding:140px 20px 80px;
+padding:140px 20px 60px;
 text-align:center;
 }
+
 .hero h1{
 margin:0;
 font-size:clamp(64px,12vw,180px);
 line-height:.9;
 letter-spacing:-.08em;
 }
+
 .hero p{
 max-width:760px;
 margin:24px auto 0;
 font-size:20px;
 color:#666;
 }
+
+/* LAYOUT */
+
 .container{
 width:min(1180px,100%);
 margin:auto;
 padding:0 20px;
 }
+
 .section{
-padding:90px 0;
+padding:60px 0 100px;
 }
-.grid{
-display:grid;
-grid-template-columns:repeat(3,minmax(0,1fr));
-gap:22px;
-}
+
+/* CARD */
+
 .card{
 background:#f5f5f5;
 padding:30px;
 border-radius:30px;
 box-shadow:0 20px 50px rgba(0,0,0,.06);
+margin-bottom:30px;
 }
+
 .card h3{
 margin-top:0;
-font-size:30px;
+font-size:32px;
 letter-spacing:-.04em;
 }
-.card p{
-color:#666;
+
+/* FORM */
+
+input,
+textarea{
+width:100%;
+padding:14px;
+margin-top:12px;
+border-radius:18px;
+border:1px solid rgba(0,0,0,.12);
+font:inherit;
 }
+
+textarea{
+min-height:180px;
+resize:vertical;
+}
+
+/* BUTTON */
+
+.button{
+display:inline-block;
+margin-top:20px;
+padding:14px 22px;
+border-radius:999px;
+background:#111;
+color:#fff;
+text-decoration:none;
+font-weight:700;
+border:none;
+cursor:pointer;
+transition:.25s ease;
+}
+
+.button:hover{
+transform:translateY(-2px);
+}
+
+/* LOGIN STATUS */
+
+#login-result{
+margin-top:18px;
+font-weight:700;
+}
+
+/* FOOTER */
+
 .footer{
 padding:50px 20px 80px;
 color:#777;
 }
+
 .footer-inner{
 width:min(1180px,100%);
 margin:auto;
@@ -109,74 +181,179 @@ justify-content:space-between;
 gap:20px;
 flex-wrap:wrap;
 }
-.gallery{
-display:grid;
-grid-template-columns:repeat(3,minmax(0,1fr));
-gap:20px;
-}
-.image{
-aspect-ratio:1/1;
-border-radius:30px;
-background:linear-gradient(135deg,#111,#666);
-}
-.button{
-display:inline-block;
-margin-top:30px;
-padding:14px 22px;
-border-radius:999px;
-background:#111;
-color:#fff;
-text-decoration:none;
-font-weight:700;
-}
-input,textarea{
-width:100%;
-padding:14px;
-margin-top:10px;
-border-radius:18px;
-border:1px solid rgba(0,0,0,.12);
-font:inherit;
-}
-textarea{min-height:160px}
+
+/* MOBILE */
+
 @media(max-width:900px){
-.grid,.gallery{
-grid-template-columns:1fr;
-}
+
 .nav{
 padding:12px 16px;
 }
+
+.hero h1{
+font-size:clamp(52px,18vw,100px);
 }
+
+}
+
 </style>
-</head><body>
+</head>
+
+<body>
 
 <nav class="nav">
-  <div class="logo">LOVE</div>
-  <div class="links">
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/gallery">Gallery</a>
-    <a href="/projects">Projects</a>
-    <a href="/editor">Editor</a>
-    <a href="/contact">Contact</a>
-  </div>
+
+<div class="logo">LOVE</div>
+
+<div class="links">
+<a href="/">Home</a>
+<a href="/about">About</a>
+<a href="/gallery">Gallery</a>
+<a href="/projects">Projects</a>
+<a href="/editor">Editor</a>
+<a href="/contact">Contact</a>
+</div>
+
 </nav>
 
 <section class="hero">
+
 <div>
+
 <h1>Contact</h1>
-<p>Simple contact section for future expansion.</p>
+
+<p>
+Simple contact section for future expansion.
+</p>
+
 </div>
+
 </section>
+
 <section class="section">
+
 <div class="container">
+
+<!-- CONTACT -->
+
 <div class="card">
-<h3>Send a message</h3>
-<input placeholder="Your name">
-<input placeholder="Your email">
-<textarea placeholder="Message"></textarea>
-<a class="button" href="/">Send</a>
+
+<h3>Send a Message</h3>
+
+<input
+type="text"
+placeholder="Your Name">
+
+<input
+type="email"
+placeholder="Your Email">
+
+<textarea
+placeholder="Your Message"></textarea>
+
+<button class="button">
+Send Message
+</button>
+
 </div>
+
+<!-- LOGIN -->
+
+<div class="card">
+
+<h3>Administrator Login</h3>
+
+<p style="color:#666;">
+Restricted area for site management.
+</p>
+
+<input
+type="text"
+id="username"
+placeholder="Username">
+
+<input
+type="password"
+id="password"
+placeholder="Password">
+
+<button
+class="button"
+onclick="login()">
+Login
+</button>
+
+<div id="login-result"></div>
+
 </div>
+
+</div>
+
 </section>
-<footer class="footer"><div class="footer-inner"><div>Contact</div><div>Future Backend Ready</div></div></footer>
-</body></html>
+
+<footer class="footer">
+
+<div class="footer-inner">
+
+<div>LOVE Website</div>
+
+<div>Future Backend Ready</div>
+
+</div>
+
+</footer>
+
+<script>
+
+function login(){
+
+const username =
+document.getElementById(
+"username"
+).value;
+
+const password =
+document.getElementById(
+"password"
+).value;
+
+const result =
+document.getElementById(
+"login-result"
+);
+
+if(
+username === "admin" &&
+password === "123456"
+){
+
+result.innerHTML =
+"✅ Login Success";
+
+result.style.color =
+"green";
+
+setTimeout(()=>{
+
+window.location.href =
+"/editor";
+
+},1000);
+
+}
+else{
+
+result.innerHTML =
+"❌ Wrong Username or Password";
+
+result.style.color =
+"red";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
